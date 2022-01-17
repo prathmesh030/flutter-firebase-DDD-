@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:injectable/injectable.dart';
 import 'package:notes_app/domain/auth/auth_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:notes_app/domain/auth/i_auth_facade.dart';
@@ -8,6 +9,8 @@ import 'package:notes_app/domain/auth/value_objects.dart';
 import 'package:notes_app/domain/core/errors.dart';
 import 'package:notes_app/domain/core/failures.dart';
 
+@lazySingleton
+@RegisterAs(IAuthFacade)
 class FirebaseAuthFacade extends IAuthFacade {
   final FirebaseAuth firebaseAuth;
   final GoogleSignIn googleSignIn;
@@ -77,4 +80,8 @@ class FirebaseAuthFacade extends IAuthFacade {
       return left(const AuthFailure.serverError());
     }
   }
+}
+
+class RegisterAs {
+  const RegisterAs(Type iAuthFacade);
 }
