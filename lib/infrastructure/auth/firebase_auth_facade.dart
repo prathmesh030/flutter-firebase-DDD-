@@ -6,8 +6,6 @@ import 'package:notes_app/domain/auth/i_auth_facade.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:notes_app/domain/auth/value_objects.dart';
-import 'package:notes_app/domain/core/errors.dart';
-import 'package:notes_app/domain/core/failures.dart';
 
 @lazySingleton
 @RegisterAs(IAuthFacade)

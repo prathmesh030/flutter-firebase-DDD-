@@ -54,7 +54,7 @@ dependencies:
   # injectable: 1.5.0
   injectable: ^1.0.4
   json_annotation: 4.3.0
-  get_it: 7.2.0
+  get_it:
   # local_auth: 1.1.8
   # open_mail_app: 0.3.0
   # provider: 6.0.1
